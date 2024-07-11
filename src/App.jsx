@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import { Container, Box, TextField, Button, Typography } from '@mui/material';
 
@@ -9,7 +9,8 @@ function App() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/form', { name, email });
+      // eslint-disable-next-line no-undef
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/form`, { name, email });
       console.log(response.data);
     } catch (error) {
       console.error('There was an error submitting the form!', error);
