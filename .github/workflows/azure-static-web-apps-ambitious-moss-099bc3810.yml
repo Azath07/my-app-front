@@ -32,13 +32,4 @@ jobs:
           output_location: "build" # Built app content directory - optional
           
 
-  close_pull_request_job:
-    runs-on: ubuntu-latest
-    name: Close Pull Request Job
-    steps:
-      - name: Close Pull Request
-        id: closepullrequest
-        uses: Azure/static-web-apps-deploy@v1
-        with:
-       
-          action: "close"
+  
